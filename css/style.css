@@ -10,6 +10,10 @@ img{max-width: 100%;}
     --orange: #ff9614;
     --purple: #4e3969;
 }
+.c-white{color: var(--white);}
+.c-purple{color: var(--purple);}
+.c-orange{color: var(--orange);}
+
 
 .col-1{width: calc((100%/12)*1);}
 .col-2{width: calc((100%/12)*2);}
@@ -29,15 +33,29 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
 .container{
     display:flex; 
     justify-content: center;
+    flex-direction: column;
 }
 
-.rate{
-    background-color: var(--orange);
-    color: var(--white);
-    border-radius: 1rem;
-    padding: 0.2rem 0.6rem;
+#app_main{
+    .recipe{
+        display: flex;
+        justify-content: space-between;
+    }
+    .rates{display: flex; align-items: center; gap: 0.7rem;}
+    .rate_orange{
+        background-color: var(--orange);
+        color: var(--white);
+        border-radius: 1rem;
+        padding: 0.2rem 0.6rem;
+    }
+    .preparation_inner{padding: 1.5rem;} 
+    .bg_kcal{
+        background-color: var(--purple);
+        color: var(--white);
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.3rem;
+    }
 }
-
 
 @media screen and (min-width: 768px){  /* //TABLET SIZE */
     .container{
