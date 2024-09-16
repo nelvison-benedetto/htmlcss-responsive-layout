@@ -2,10 +2,12 @@
 
 #debug *{border: 1px dashed black;}
 img{max-width: 100%;}
+iframe {max-width: 100%;height: auto;}
 
 :root{
     --white: #ffffff;
     --gray: #f6f5f3;
+    --gray-dark: #999999;
     --black: #111;
     --orange: #ff9614;
     --purple: #4e3969;
@@ -30,17 +32,29 @@ img{max-width: 100%;}
 
 body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
 
-.container{
-    display:flex; 
-    justify-content: center;
-    flex-direction: column;
-}
+
+
+.d-flex{display: flex;}
+.f-j-c{justify-content: center;}
+.f-j-s{justify-content: flex-start;}
+
+
+
+#app_header {
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    h1{color: var(--orange); font-family: "Oleo Script"; font-size: 2.8rem;}
+} 
 
 #app_main{
+    .container{display: flex; flex-direction: column; justify-content: center; align-items: center;}
     .recipe{
         display: flex;
         justify-content: space-between;
     }
+    .type_recipe{color: var(--gray-dark);}
     .rates{display: flex; align-items: center; gap: 0.7rem;}
     .rate_orange{
         background-color: var(--orange);
@@ -58,10 +72,12 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
 }
 
 @media screen and (min-width: 768px){  /* //TABLET SIZE */
-    .container{
-        justify-content: flex-start;
+    #app_header{
+        .container{
+            display: flex; justify-content: flex-start;
+        }
     }
-}
+} 
 
 
 
