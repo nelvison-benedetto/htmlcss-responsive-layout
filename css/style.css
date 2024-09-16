@@ -2,6 +2,7 @@
 
 /* #debug *{border: 1px dashed black;}
  */
+
 img{max-width: 100%;}
 iframe {max-width: 100%;height: auto;}
 
@@ -19,6 +20,7 @@ iframe {max-width: 100%;height: auto;}
 
 .bg-purple{background-color: var(--purple);}
 .bg-white{background-color: var(--white);}
+.bg-gray{background-color: var(--gray);}
 
 .col-1{width: calc((100%/12)*1);}
 .col-2{width: calc((100%/12)*2);}
@@ -39,7 +41,8 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
 .f-j-c{justify-content: center;}
 .f-j-s{justify-content: flex-start;}
 
-
+.py-b-1_5{padding-bottom: 1.5rem;}
+.py-t-1_5{padding-top: 1.5rem;}
 
 #app_header {
     .container{
@@ -66,7 +69,16 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         border-radius: 1rem;
         padding: 0.2rem 0.6rem;
     }
-    .preparation_inner{padding: 1.5rem;} 
+    .preparation{padding: 1.5rem;}
+    .preparation_inner{
+        padding: 1.1rem;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    } 
+    .kcal_info{position: relative;}
+    .info{position: absolute; right:0;}
     .bg_kcal{
         background-color: var(--purple);
         color: var(--white);
@@ -87,7 +99,6 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         width: 100%;
         height: 100%;
     }
-    .instructions{margin-top: 100px; }
 }
 
 @media screen and (min-width: 768px){  /* //TABLET SIZE */
