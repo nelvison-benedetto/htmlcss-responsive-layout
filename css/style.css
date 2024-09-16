@@ -1,6 +1,7 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 
-#debug *{border: 1px dashed black;}
+/* #debug *{border: 1px dashed black;}
+ */
 img{max-width: 100%;}
 iframe {max-width: 100%;height: auto;}
 
@@ -16,6 +17,8 @@ iframe {max-width: 100%;height: auto;}
 .c-purple{color: var(--purple);}
 .c-orange{color: var(--orange);}
 
+.bg-purple{background-color: var(--purple);}
+.bg-white{background-color: var(--white);}
 
 .col-1{width: calc((100%/12)*1);}
 .col-2{width: calc((100%/12)*2);}
@@ -31,8 +34,6 @@ iframe {max-width: 100%;height: auto;}
 .col-12{width: calc((100%/12)*12);}
 
 body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
-
-
 
 .d-flex{display: flex;}
 .f-j-c{justify-content: center;}
@@ -54,8 +55,10 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
     .recipe{
         display: flex;
         justify-content: space-between;
+        padding: 0.3rem 0 1rem 0;
     }
-    .type_recipe{color: var(--gray-dark);}
+    .type_recipe{color: var(--gray-dark); padding-top: 1rem;}
+    .h1_big{font-size: 1.6rem;}
     .rates{display: flex; align-items: center; gap: 0.7rem;}
     .rate_orange{
         background-color: var(--orange);
@@ -70,20 +73,21 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         padding: 0.1rem 0.4rem;
         border-radius: 0.3rem;
     }
-    .how_to_do{
+    .youtube{
         position: relative;
         width: 100%;
         padding-bottom: 56.25%; /* Rapporto 16:9 */
         height: 0;
         overflow: hidden; /* il contenuto eccedente viene nascosto */
     }
-    .how_to_do iframe{
+    .youtube iframe{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
     }
+    .instructions{margin-top: 100px; }
 }
 
 @media screen and (min-width: 768px){  /* //TABLET SIZE */
