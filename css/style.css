@@ -45,11 +45,12 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         display: flex;
         justify-content: center;
     }
-    h1{color: var(--orange); font-family: "Oleo Script"; font-size: 2.8rem;}
+    .box{padding: 0.0rem 0rem;}
+    h1{color: var(--orange); font-family: "Oleo Script"; font-size: 2.6rem;}
 } 
 
 #app_main{
-    .container{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    .container{display: flex; flex-direction: column; align-items: center; background-color: var(--gray);}
     .recipe{
         display: flex;
         justify-content: space-between;
@@ -69,15 +70,58 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         padding: 0.1rem 0.4rem;
         border-radius: 0.3rem;
     }
+    .how_to_do{
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Rapporto 16:9 */
+        height: 0;
+        overflow: hidden; /* il contenuto eccedente viene nascosto */
+    }
+    .how_to_do iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media screen and (min-width: 768px){  /* //TABLET SIZE */
+    .col-md-1{width: calc((100%/12)*1);}
+    .col-md-2{width: calc((100%/12)*2);}
+    .col-md-3{width: calc((100%/12)*3);}
+    .col-md-4{width: calc((100%/12)*4);}
+    .col-md-5{width: calc((100%/12)*5);}
+    .col-md-6{width: calc((100%/12)*6);}
+    .col-md-7{width: calc((100%/12)*7);}
+    .col-md-8{width: calc((100%/12)*8);}
+    .col-md-9{width: calc((100%/12)*9);}
+    .col-md-10{width: calc((100%/12)*10);}
+    .col-md-11{width: calc((100%/12)*11);}
+    .col-md-12{width: calc((100%/12)*12);}
+
     #app_header{
         .container{
             display: flex; justify-content: flex-start;
-        }
+        } 
+        .box{padding: 0.0rem 0 0.0rem 1rem;}    
     }
 } 
+@media screen and (min-width: 992px){  /* //TABLET SIZE */
+    .col-lg-1{width: calc((100%/12)*1);}
+    .col-lg-2{width: calc((100%/12)*2);}
+    .col-lg-3{width: calc((100%/12)*3);}
+    .col-lg-4{width: calc((100%/12)*4);}
+    .col-lg-5{width: calc((100%/12)*5);}
+    .col-lg-6{width: calc((100%/12)*6);}
+    .col-lg-7{width: calc((100%/12)*7);}
+    .col-lg-8{width: calc((100%/12)*8);}
+    .col-lg-9{width: calc((100%/12)*9);}
+    .col-lg-10{width: calc((100%/12)*10);}
+    .col-lg-11{width: calc((100%/12)*11);}
+    .col-lg-12{width: calc((100%/12)*12);}
+}
+
 
 
 
