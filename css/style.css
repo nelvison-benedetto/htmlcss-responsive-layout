@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 
-/* #debug *{border: 1px dashed black;}
- */
+#debug *{border: 1px dashed black;}
+
 
 img{max-width: 100%;}
 
@@ -104,6 +104,7 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
     .all_preparation{padding: 1.8rem 0;}
 
     .row{
+        max-width: 100%;
         display: flex; 
         justify-content: space-between;
     }
@@ -122,7 +123,7 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
     .icon_share{font-size: 1.2rem;}
     .box_shares{margin: 2rem 0;}
     .box_howtodo{border-radius: 0.3rem; box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);}
-
+    .share_text{display: none;}
 }
 
 @media screen and (min-width: 768px){  /* //TABLET SIZE */
@@ -156,7 +157,6 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         .card_py-md{
             padding: 0.5rem 3.1rem;
         }
-
     }
 } 
 @media screen and (min-width: 992px){  /* //TABLET SIZE */
@@ -172,6 +172,20 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
     .col-lg-10{width: calc((100%/12)*10);}
     .col-lg-11{width: calc((100%/12)*11);}
     .col-lg-12{width: calc((100%/12)*12);}
+
+    #app_main{
+        .box_howtodo-lg{
+            display: flex;
+            flex-direction: row;
+        }
+        .youtube-lg{flex: 2;}
+        .preparation-lg{flex: 1;}
+        .list_preparation-lg{list-style: none; display: flex; flex-direction: column; gap: 0.8rem;}
+        .card > i{padding-right: 0.5rem;}
+        .share_text{display: inline-block; font-weight: bold;}
+        .card_grow-lg{padding: 0.5rem 0; flex-grow: 1; gap: 1rem;} /* //NEED DISTANCE */
+        .row-lg{display: flex; }
+    }
 }
 
 
