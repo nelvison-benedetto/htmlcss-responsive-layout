@@ -5,7 +5,7 @@
 
 img{max-width: 100%;}
 
-body{font-size: 0.8rem;}
+body{font-size: 1rem;}
 
 :root{
     --white: #ffffff;
@@ -13,7 +13,7 @@ body{font-size: 0.8rem;}
     --gray-dark: #999999;
     --black: #111;
     --orange: #ff9614;
-    --purple: #4e3969;
+    --purple: #7c69a4;
 }
 .c-white{color: var(--white);}
 .c-purple{color: var(--purple);}
@@ -22,6 +22,7 @@ body{font-size: 0.8rem;}
 .bg-purple{background-color: var(--purple);}
 .bg-white{background-color: var(--white);}
 .bg-gray{background-color: var(--gray);}
+
 
 .col-1{width: calc((100%/12)*1);}
 .col-2{width: calc((100%/12)*2);}
@@ -36,7 +37,7 @@ body{font-size: 0.8rem;}
 .col-11{width: calc((100%/12)*11);}
 .col-12{width: calc((100%/12)*12);}
 
-body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
+body{font-family: Helvetica,"Noto Sans","Roboto", Arial, sans-serif;}
 
 .d-flex{display: flex;}
 .f-j-c{justify-content: center;}
@@ -44,13 +45,18 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
 
 .py-b-1_5{padding-bottom: 1.5rem;}
 .py-t-1_5{padding-top: 1.5rem;}
-
+.pb{padding-bottom: 0.5rem;}
+.pb-2{padding-bottom: 1.4rem;}
+.mr{margin-right: 0.3rem;}
+.mb{margin-bottom: 1.4rem;}
+.mt{margin-top: 1.4rem;}
+.pt{padding-top: 1.4rem;}
 #app_header {
     .container{
         display: flex;
         justify-content: center;
     }
-    .box{padding: 0.0rem 0rem;}
+    .box{padding: 0rem;}
     h1{color: var(--orange); font-family: "Oleo Script"; font-size: 2.6rem;}
 } 
 
@@ -61,14 +67,15 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         justify-content: space-between;
         padding: 0.3rem 0 1rem 0;
     }
-    .type_recipe{color: var(--gray-dark); padding-top: 1rem;}
+    .type_recipe{color: var(--gray-dark); padding-top: 1.5rem;}
     .h1_big{font-size: 1.6rem;}
     .rates{display: flex; align-items: center; gap: 0.4rem;}
     .rate_orange{
         background-color: var(--orange);
         color: var(--white);
-        border-radius: 1rem;
-        padding: 0.2rem 0.6rem;
+        font-size: 1.2rem;
+        border-radius: 1.2rem;
+        padding: 0.4rem 0.6rem 0.4rem 0.6rem;
     }
     .preparation{padding: 1.5rem;}
     .preparation_inner{
@@ -78,18 +85,18 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         flex-direction: column;
         gap: 0.5rem;
     } 
-    .kcal_info{position: relative;}
-    .info{position: absolute; right:0;}
+    .kcal_info{position: relative; margin-bottom: 0.4rem;}
+    .info{position: absolute; right:0; font-size: 1.2rem;}
     .bg_kcal{
         background-color: var(--purple);
         color: var(--white);
-        padding: 0.1rem 0.4rem;
-        border-radius: 0.3rem;
+        padding: 0.4rem 0.7rem;
+        border-radius: 0.4rem;
     }
     .youtube{
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; /* Rapporto 16:9 */
+        padding-bottom: 56.25%; /* Rapporto 16:9 !*/
         height: 0;
         overflow: hidden; /* il contenuto eccedente viene nascosto */
     }
@@ -114,19 +121,47 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         justify-content: center; 
         align-items: center;
         /* aspect-ratio:1/1; */
-        border-radius: 1rem; 
+        border-radius: 1.7rem; 
         box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-        
     }
-    .card_py{padding: 0.5rem 0.8rem; }
+    .card_py{padding: 0.4rem 0.8rem; }
     .shares{width: 100%;}
-    .icon_share{font-size: 1.2rem;}
+    .icon_share{font-size: 1.4rem; padding: 0.6rem;}
     .box_shares{margin: 2rem 0;}
-    .box_howtodo{border-radius: 0.3rem; box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);}
+    .box_howtodo{border-radius: 0.3rem; box-shadow: 1px 5px 9px rgba(0, 0, 0, 0.1);}  /*x-y-blurringradius-color*/
     .share_text{display: none;}
+
+    .sectionpresentation{
+        h4{font-size: 2.2rem;}
+        hr{width: 25%; color: var(--orange); border: solid;}
+        p{line-height: 1.6rem; }
+    }
+    .sectionbanner{
+        display: none;
+    }
+}
+footer{
+    font-size: 0.9rem;
+    padding: 1rem 0 1.6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--purple);
+    color: white;
+    div{
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        a{color: white;}
+    }
+    a{color: white;}
 }
 
-@media screen and (min-width: 768px){  /* //TABLET SIZE */
+
+
+@media screen and (min-width: 768px){  /* //TABLET SIZE IN SU (sopra questo codice, is mobile-first)*/
     .col-md-1{width: calc((100%/12)*1);}
     .col-md-2{width: calc((100%/12)*2);}
     .col-md-3{width: calc((100%/12)*3);}
@@ -159,7 +194,8 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
         }
     }
 } 
-@media screen and (min-width: 992px){  /* //TABLET SIZE */
+
+@media screen and (min-width: 992px){  /* //DESKTOP SIZE IN SU*/
     .col-lg-1{width: calc((100%/12)*1);}
     .col-lg-2{width: calc((100%/12)*2);}
     .col-lg-3{width: calc((100%/12)*3);}
@@ -178,16 +214,22 @@ body{font-family: "Noto Sans","Roboto", Arial, Helvetica, sans-serif;}
             display: flex;
             flex-direction: row;
         }
-        .youtube-lg{flex: 2;}
-        .preparation-lg{flex: 1;}
+        .youtube-lg{flex: 2;}  /*se ci sono tot 3 elems sulla row, questo elem occupa 2/3*/
+        .preparation-lg{flex: 1;} /*rimane della sua dimension*/
         .list_preparation-lg{list-style: none; display: flex; flex-direction: column; gap: 0.8rem;}
-        .card > i{padding-right: 0.5rem;}
+        .row-lg{display:flex; gap:0.5rem; }
+        .card > i{padding-left: 0.7rem;}
+        .card>span{padding-right: 0.7rem;}
         .share_text{display: inline-block; font-weight: bold;}
-        .card_grow-lg{padding: 0.5rem 0; flex-grow: 1; gap: 1rem;} /* //NEED DISTANCE */
-        .row-lg{display: flex; }
+        .card_grow-lg{padding: 0.5rem 0; flex-grow: 1; gap: 0.2rem;} 
+
+        .sectionbanner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
-
 
 
 
